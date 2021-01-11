@@ -1,0 +1,316 @@
+.table {
+    thead {
+        th {
+            background: #ffffff;
+            border-bottom: 0px;
+        }
+    }
+    strong {
+        color: #000000;
+    }
+}
+
+.balance-transfer {
+    display: none;
+}
+
+//OFFERS
+.cong-sec1 {
+    border-bottom: 5px solid #263238;
+    background-image: url("../images/cong-bg1.png");
+    background-repeat: no-repeat;
+    background-position: 78% center;
+    background-size: inherit;
+    @media(max-width: 768px)and(min-width:320px) {
+        background-image:none;
+    }
+    .rejection {
+        background-image: url("../images/rejected.png");
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 0px;
+        padding-left: 150px;
+        @media(max-width: 768px)and(min-width:320px) {
+            padding: 0px;
+            padding-top: 110px;
+            background-size: inherit;
+            background-position: center 1px;
+        }
+    }
+}
+
+.cong-sec-thankyou {
+    border-bottom: 5px solid #263238;
+    background-image: url("../images/cong-bg-thankyou.png");
+    background-repeat: no-repeat;
+    background-position: 100% center;
+    background-size: inherit;
+}
+
+.cong-sec-thankyou2 {
+    background-image: url("../images/sm-halfcircle.png");
+    background-repeat: no-repeat;
+    background-position: 100% top;
+    background-size: inherit;
+    @media(max-width: 480px)and(min-width:320px) {
+        background-image:none;
+    }
+    @media(max-width: 767px)and(min-width:500px) {
+        background-position: 100% top;
+    }
+}
+.cong-sec-thankyounew {
+    background-image: url("../images/sm-halfcircle-new.png");
+    background-repeat: no-repeat;
+    background-position: 100% top;
+    background-size: inherit;
+    @media(max-width: 480px)and(min-width:320px) {
+        background-image:none;
+    }
+    @media(max-width: 767px)and(min-width:500px) {
+        background-position: 100% top;
+    }
+}
+.sm-half-circle {
+    background-image: url("../images/sm-halfcircle.png");
+    background-repeat: no-repeat;
+    background-position: 105% top;
+    background-size: inherit;
+    @media(max-width: 480px)and(min-width:320px) {
+        background-image:none;
+    }
+    @media(max-width: 767px)and(min-width:500px) {
+        background-position: 100% top;
+    }
+}
+
+.half-circle {
+    background-image: url("../images/half-circle_1.png");
+    background-repeat: no-repeat;
+    background-position: 93%;
+    background-size: inherit;
+    @media(max-width: 480px)and(min-width:320px) {
+        background-image:none;
+    }
+    @media(max-width: 767px)and(min-width:500px) {
+        background-position: 100% top;
+    }
+}
+
+
+.cong-sec {
+    border-bottom: 5px solid #263238;
+    background-image: url("../images/cong-bg1.png");
+    background-repeat: no-repeat;
+    background-position: 70% center;
+    background-size: inherit;
+    @media(max-width: 768px)and(min-width:320px) {
+        background-image:none;
+    }
+    .cong {
+        padding: 10px 0px;
+        padding-left: 150px;
+        background-image: url("../images/cong.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .rejection {
+        background-image: url("../images/rejected.png");
+        background-size: auto;
+    }
+    .thankyou {
+        background-image: url("../images/thankyou.png");
+        background-size: auto;
+    }
+    @media screen and (max-width: 480px) {
+        background-position: 0% center;
+        background-size: -20%;
+        .cong {
+            padding: 0px;
+            padding-top: 150px;
+            background-size: inherit;
+            background-position: center 1px;
+            h3,
+            p {
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+}
+
+.offer-tbl {
+    .offer-row {
+        display: flex;
+        width: 100%;
+        background: #f7f7f7;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        justify-content: flex-start;
+        box-shadow: 0px 2px 7px 0px rgba(204, 204, 204, 0.5);
+        margin-bottom: 8px;
+        cursor: pointer;
+        -webkit-transition: background-color 12s ease-out;
+        -moz-transition: background-color 1s ease-out;
+        -o-transition: background-color 1s ease-out;
+        transition: background-color 1s ease-out;
+        &.head {
+            .offer-col {
+                font-size: 13px;
+            }
+            &:hover {
+                background: inherit;
+            }
+            @media screen and (max-width: 480px) {
+                display: none;
+            }
+        }
+        &.active {
+            background: $clr-dark-orange;
+            .offer-col {
+                color: #ffffff;
+            }
+            &:hover {
+                background: $clr-dark-orange;
+            }
+            @media screen and (max-width: 480px) {
+                .offer-col {
+                    color: #000000;
+                    &:nth-child(1) {
+                        color: $clr-dark-orange;
+                        font-weight: 700;
+                        border-bottom: 2px solid $clr-dark-orange;
+                    }
+                }
+            }
+        }
+        &:hover {
+            background: $clr-base-sec;
+            -webkit-transition: background-color 12s ease-out;
+            -moz-transition: background-color 1s ease-out;
+            -o-transition: background-color 1s ease-out;
+            transition: background-color 1s ease-out;
+        }
+        .offer-col {
+            flex: 1;
+            padding: 20px 0px;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #000000;
+            text-align: center;
+        }
+        .mob-tbl {
+            display: none;
+        }
+        @media screen and (max-width: 480px) {
+            display: block;
+            box-shadow: 0px 2px 7px 0px rgba(115, 115, 115, 0.5);
+            overflow: hidden;
+            margin: 25px 0px;
+            .offer-col {
+                text-align: left;
+                padding: 10px;
+                &:nth-child(even) {
+                    background: rgb(228, 228, 228)
+                }
+                &:nth-child(odd) {
+                    background: #FFF
+                }
+                .mob-tbl {
+                    display: inline-block;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+.app-status {
+    .lhs-container {
+        .lhs {
+            width: 50%;
+            float: left;
+            @media(max-width: 480px)and(min-width:320px) {
+                text-align: left;
+                margin-top: 19px;
+                width: 100%;
+            }
+        }
+    }
+    .lhs {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #263238;
+        font-weight: 600;
+        .loan {}
+        .amnt {
+            font-size: 19px;
+            font-weight: 700;
+            color: #000000;
+            margin: 10px 0px;
+            @media(max-width: 480px)and(min-width:320px) {
+                display: inline-block;
+                border-right: 1px solid #ccc;
+                padding: 6px;
+                margin-right: 11px;
+                padding-right: 19px;
+            }
+        }
+        .amnt-word {
+            @media(max-width: 480px)and(min-width:320px) {
+                display: inline-block;
+            }
+        }
+    }
+}
+ 
+
+.cong-sec-thankyou3{
+    background-image: url("../images/sm-halfcircle.png");
+    background-repeat: no-repeat;
+    background-position: 100% top;
+    background-size: inherit;
+    border-bottom: 5px solid #263238;
+//    background-image: none;
+//     background-repeat: no-repeat;
+//     background-position: 70% center;
+//     background-size: inherit;
+    @media(max-width: 768px)and(min-width:320px) {
+        background-image:none;
+    }
+    .cong-thank {
+        padding: 10px 0px;
+        padding-left: 150px;
+        background-image: url("/images/thankyou.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .cong-sorry {
+        padding: 10px 0px;
+        padding-left: 150px;
+        background-image: url("../images/rejected.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    @media(max-width: 480px) {
+        background-position: 0% center;
+        background-size: -20%;
+        .cong-thank {
+            padding: 0px;
+            padding-top: 150px;
+            background-size: inherit;
+            background-position: center 1px;
+            h3,
+            p {
+                text-align: center;
+                display: block;
+                font-size: 12px;
+            }
+        }
+    }
+}
+

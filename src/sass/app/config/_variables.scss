@@ -1,0 +1,97 @@
+/* Variables.scss */
+
+* {
+    letter-spacing: .5px;
+}
+
+html,
+html a {
+    -webkit-font-smoothing: antialiased !important;
+}
+
+/* colors */
+
+$clr-root: #ffffff;
+$clr-base: #595959;
+$clr-base-sec: #b5b5b5;
+
+$clr-default: #006FBC;
+$clr-primary: #FFA938;
+$clr-sec-alternate:#f6f6f6;
+$clr-header:#273238;
+$clr-dark-orange:#f15931;
+$clr-light-orange: #fc8434;
+$clr-dark-green:#008256;
+$clr-light-green: #01a46b;
+
+/* breakpoints */
+
+$mobile-breakpoint: 768px;
+/* Font Weight */
+
+/* Font Weight */
+
+$font-light:300;
+$font-regular:400;
+$font-normal:400;
+$font-medium:500;
+$font-semi-bold:600;
+$font-bold:700;
+$font-extra-bold:800;
+
+.thin {
+    font-weight: $font-light;
+}
+
+.regular {
+    font-weight: $font-regular;
+}
+
+.normal {
+    font-weight: $font-normal;
+}
+
+.medium {
+    font-weight: $font-medium;
+}
+
+.semi-bold {
+    font-weight: $font-semi-bold;
+}
+
+.bold {
+    font-weight: $font-bold;
+}
+
+.extra-bold {
+    font-weight: $font-extra-bold;
+}
+
+/* breakpoints */
+$screen-lg:1366px;
+$screen-md:768px;
+$mobile-breakpoint: 768px;
+$screen-ms:480px;
+$screen-xs:320px;
+
+//TEXT TRANFORN
+.u-case {
+    text-transform: uppercase;
+}
+
+// TEXT COLOR
+.text-grey {
+    color: #7a909a;
+}
+
+.text-white {
+    color: $clr-root;
+}
+
+.tetx-orange {
+    color: $clr-dark-orange;
+}
+
+.mcs {
+    max-height: 400px;
+}

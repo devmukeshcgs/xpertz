@@ -1,0 +1,471 @@
+.login-wrapper {
+    height: 100vh;
+    @media screen and (max-width: 480px) {
+        padding: 0px 10px;
+    }
+    &.welcome {
+        // background-image: linear-gradient($clr-dark-orange, $clr-light-orange);
+        background-color: #f15a30;
+        .logo {
+            width: 50%;
+            margin: 0 auto;
+        }
+        .user {
+            color: #fff;
+            @media screen and (max-width: 480px) {
+                h2 {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .welcome-bg {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 1;
+        background-image: url("../images/welcome-bg.png");
+        width: 100%;
+        height: 50vh;
+        opacity: 0.5;
+        @media screen and (max-width: 480px) {
+            background-size: cover;
+        }
+    } // .email-otp {
+    //     padding-top: 150px !important;
+    // }
+}
+
+.orange-stripe {
+    display: block;
+    background-image: linear-gradient($clr-dark-orange, $clr-light-orange);
+    height: 7px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.login-container {
+    border-radius: 14px;
+    background: $clr-root;
+    max-width: 85%;
+    margin: 0 auto;
+    box-shadow: 0 0 14px 0px #ccc;
+    @media (max-width: 1024px)and (min-width: 768px) {
+        max-width: 97%;
+    }
+    @media (max-width: 767px)and (min-width: 500px) {
+        max-width: 95%;
+    }
+}
+
+.logo {
+    padding: 30px 0px;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    @media screen and (max-width: 480px) {
+        max-width: 300px;
+    }
+}
+
+.fx-row {
+    display: flex;
+    .fx-col {
+        flex: 1;
+        min-height: 500px;
+        height: 500px;
+        // @media screen and (max-width: 1024px) and (min-width:768px) {
+        //     min-height: auto;
+        // }
+        @media screen and (max-width:767px) and (min-width:500px) {
+            min-height: 300px;
+        }
+    }
+    @media screen and (max-width:480px) and (min-width:320px) {
+        display: block;
+        .fx-col {
+            flex: none;
+            min-height: 300px;
+        }
+    }
+}
+
+.login-bg {
+    background-image: url(../images/login-bg.png);
+    background-position: 100% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    border-radius: 14px 0px 0px 14px;
+    @media screen and (max-width: 480px) and (min-width:320px) {
+        background-position:center;
+    }
+}
+
+.powered-by {
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 12px;
+}
+
+#login {
+    padding: 100px 50px;
+    @media screen and (max-width: 480px) and (min-width:320px) {
+        padding: 100px 30px;
+    }
+    @media screen and (max-width: 767px) and (min-width:500px) {
+        padding: 40px 20px;
+    }
+    input {
+        font-weight: 400;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .action-btns {
+        text-align: center;
+    } // @media screen and (max-width:480px) {
+    //     padding: 50px 30px 10px 30px;
+    //     .action-btns {
+    //         text-align: center;
+    //     }
+    // }
+    .last-login {
+        margin-top: 20px;
+        @media screen and (max-width: 768px)and (min-width:320px) {
+            font-size: 12px;
+        }
+    }
+    .date {
+        color: #000;
+        font-weight: 600;
+    }
+    .help-text {
+        display: block;
+        margin-bottom: 25px;
+    }
+    .match-check i.fa {
+        color: #219964;
+        font-size: 15px;
+    }
+    .with-icon.right .inp-icon3 {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+    }
+    .with-icon.right .inp-icon {
+        position: absolute;
+        bottom: 0px;
+        padding: 9px 6px;
+        right: 0px;
+        
+    }
+    .with-icon.right .inp-icon1 {
+        position: absolute;
+    top: 0px;
+    padding: 9px 6px;
+    right: 0px;
+    }
+    .error-text {
+        font-size: 12px;
+        margin-left: 0px;
+        color: #ed3733;
+        position: absolute;
+    }
+    .otp-mail {
+        font-size: 15px;
+        color: #000;
+        display: block;
+        font-weight: 600;
+        padding: 0px 14px 30px;
+        @media screen and (max-width: 1024px)and (min-width:768px) {
+            font-size: 12px;
+        }
+        @media screen and (max-width: 767px)and (min-width:500px) {
+            font-size: 12px;
+        }
+        a {
+            color: #000;
+        }
+    }
+    .attemt {
+        @media screen and (max-width: 767px)and (min-width:500px) {
+            display: block;
+            margin-bottom: 0px;
+            position: absolute;
+            bottom: 0px;
+            // right: 0px;
+            left: 15px;
+            float: left;
+            top: 0;
+            margin-top: -10px;
+        }
+        @media screen and (max-width: 480px)and (min-width:320px) {
+            display: block;
+            margin-bottom: 0px;
+            position: absolute;
+            bottom: 0px;
+            right: auto;
+            left: 15px;
+            float: left;
+            top: 0;
+            margin-top: -10px;
+        }
+        
+    }
+    .otp-sm {
+        @media screen and (max-width: 480px)and (min-width:320px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 767px)and (min-width:500px) {
+            width: 100%;
+        }
+    }
+    .team-block {
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        padding: 15px 0 50px;
+        margin-top: 50px;
+        @media screen and (max-width: 768px) {
+            padding: 15px 0 15px;
+        }
+    }
+    .team-no {
+        @media screen and (max-width: 768px) {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #000;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+    .team-mail {
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
+        a {
+            color: #000;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+}
+
+
+
+#email-otp {
+    padding: 100px 50px;
+    margin-top: 50px;
+    @media screen and (max-width: 480px) and (min-width:320px) {
+        padding: 100px 30px;
+        margin-top: 0px;
+    }
+    @media screen and (max-width: 767px) and (min-width:500px) {
+        padding: 40px 20px;
+    }
+    input {
+        font-weight: bold;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .action-btns {
+        text-align: center;
+    } // @media screen and (max-width:480px) {
+    //     padding: 50px 30px 10px 30px;
+    //     .action-btns {
+    //         text-align: center;
+    //     }
+    // }
+   
+}
+
+
+
+
+#forgotpass {
+    padding: 100px 50px;
+    @media screen and (max-width: 480px) and (min-width:320px) {
+        padding: 100px 30px;
+    }
+    @media screen and (max-width: 767px) and (min-width:500px) {
+        padding: 40px 20px;
+    }
+    input {
+        font-weight: 400;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .action-btns {
+        text-align: center;
+    } // @media screen and (max-width:480px) {
+    //     padding: 50px 30px 10px 30px;
+    //     .action-btns {
+    //         text-align: center;
+    //     }
+    // }
+    .last-login {
+        margin-top: 20px;
+        @media screen and (max-width: 768px)and (min-width:320px) {
+            font-size: 12px;
+        }
+    }
+    .date {
+        color: #000;
+        font-weight: 600;
+    }
+    .help-text {
+        display: block;
+        margin-bottom: 40px;
+    }
+    
+    .match-check i.fa {
+        color: #219964;
+        font-size: 15px;
+    }
+
+    .with-icon.right .inp-icon3 {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+    }
+    .with-icon.right .inp-icon {
+        position: absolute;
+        bottom: 0px;
+        padding: 9px 6px;
+        right: 0px;
+        
+    }
+    .with-icon.right .inp-icon1 {
+        position: absolute;
+    top: 0px;
+    padding: 9px 6px;
+    right: 0px;
+    }
+    .error-text {
+        font-size: 12px;
+        margin-left: 0px;
+        color: #ed3733;
+        position: absolute;
+    }
+    .otp-mail {
+        font-size: 15px;
+        color: #000;
+        display: block;
+        font-weight: 600;
+        padding: 0px 14px 30px;
+        @media screen and (max-width: 1024px)and (min-width:768px) {
+            font-size: 12px;
+        }
+        @media screen and (max-width: 767px)and (min-width:500px) {
+            font-size: 12px;
+        }
+        a {
+            color: #000;
+        }
+    }
+    .attemt {
+        @media screen and (max-width: 767px)and (min-width:500px) {
+            display: block;
+            margin-bottom: 0px;
+            position: absolute;
+            bottom: 0px;
+            // right: 0px;
+            left: 15px;
+            float: left;
+            top: 0;
+            margin-top: -10px;
+        }
+        @media screen and (max-width: 480px)and (min-width:320px) {
+            display: block;
+            margin-bottom: 0px;
+            position: absolute;
+            bottom: 0px;
+            right: auto;
+            left: 15px;
+            float: left;
+            top: 0;
+            margin-top: -10px;
+        }
+        
+    }
+    .otp-sm {
+        @media screen and (max-width: 480px)and (min-width:320px) {
+            width: 100%;
+        }
+        @media screen and (max-width: 767px)and (min-width:500px) {
+            width: 100%;
+        }
+    }
+    .team-block {
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        padding: 15px 0 50px;
+        margin-top: 50px;
+        @media screen and (max-width: 768px) {
+            padding: 15px 0 15px;
+        }
+    }
+    .team-no {
+        @media screen and (max-width: 768px) {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #000;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+    .team-mail {
+        @media(max-width:768px) {
+            text-align: center;
+        }
+        a {
+            color: #000;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+}
+.inp-icon1 i{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//FORGOT PASSWORD
+.forgot-pass {
+    margin-top: 15px;
+    a {
+        color: $clr-dark-green;
+        font-size: 12px;
+    }
+}
+// .middle-align{
+//     width: 50%;
+//     display: table-cell;
+//     height: 100%;
+//     vertical-align: middle;
+//     padding: 85px 50px;
+//     @media screen and (max-width: 480px)and (min-width:320px) {
+//         padding: 0px;
+//     }
+//     @media screen and (max-width: 1024px)and (min-width:768px) {
+//         padding: 85px 0px;
+//     }
+// }
