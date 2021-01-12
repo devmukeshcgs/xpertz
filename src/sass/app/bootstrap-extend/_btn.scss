@@ -8,12 +8,14 @@
     @include transition(all 0.3s ease);
     outline: none;
     overflow: hidden;
+    font-weight: $font-medium;
 
     &.btn-default {
         text-transform: uppercase;
         border-color: $clr-default;
         color: $clr-root;
         font-weight: $font-light;
+        font-weight: $font-medium;
         position: relative;
         z-index: 1;
         background: $clr-default;
@@ -49,7 +51,7 @@
         //     z-index: -1;
         // }
         &.typ-outline {
-            border: 1px solid $clr-default;
+            border: 2px solid $clr-default;
             color: $clr-default;
             background: transparent;
             @include transition(all 0.3s ease 0.4s);
@@ -394,9 +396,9 @@
 @media screen and (max-width:768px) {
     .btn {
         padding: 10px 16px;
-        border-radius: 20px;
         font-size: 13px;
         line-height: 15px;
+        font-weight: $font-medium;
 
         &.btn-default {
             &:before {}

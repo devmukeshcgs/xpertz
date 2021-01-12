@@ -1,5 +1,5 @@
 .app-sec {
-    padding: 10px 0;
+    padding: 30px 0;
     background: $clr-root;
 
     .sec-head {
@@ -15,7 +15,8 @@
         font-size: 16px;
         // text-transform: uppercase;
         color: $clr-default;
-        font-weight: $font-semi-bold;
+        font-weight: $font-medium;
+        position: relative;
 
         .sm-text {
             font-size: 16px;
@@ -24,6 +25,17 @@
             margin-bottom: 12px;
             font-weight: 400;
             letter-spacing: 3px;
+        }
+
+        .see-all {
+            position: absolute;
+            right: 0px;
+
+            a {
+                font-size: 14px;
+                font-weight: normal;
+                color: #555555 !important;
+            }
         }
     }
 
@@ -38,6 +50,39 @@
 
     .sec-cont {
         overflow: hidden;
+    }
+
+    &.typ-big {
+        .sec-head {}
+
+        .sec-title {
+            font-size: 30px;
+            color: #555555;
+            font-weight: $font-semi-bold;
+            position: relative;
+
+            .sm-text {}
+
+            .see-all {
+                a {}
+            }
+        }
+
+        .sub-title {}
+
+        .sec-cont {}
+    }
+
+    &.typ-centred {
+        .sec-head {}
+
+        .sec-title {
+            text-align: center;
+        }
+
+        .sub-title {}
+
+        .sec-cont {}
     }
 }
 

@@ -90,6 +90,47 @@
             }
         }
     }
+
+    &.typ-testimonials {
+        margin-top: 50px;
+
+        .card-item {
+            text-align: center;
+            border: 1px solid #006FBC3D;
+            border-radius: 12px;
+            padding: 25px;
+
+            .image {
+                border-radius: 50%;
+                background-color: khaki;
+                margin-bottom: 25px;
+                padding: 15px;
+            }
+
+            .details {
+                color: $clr-base;
+
+                .name {
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                    font-weight: $font-semi-bold;
+                    letter-spacing: normal;
+                }
+
+                .designation {
+                    font-size: 12px;
+                    font-weight: $font-light;
+                    letter-spacing: normal;
+                }
+
+                .content {
+                    margin-top: 25px;
+                    line-height: 25px;
+                    color: $clr-default;
+                }
+            }
+        }
+    }
 }
 
 .swiper-button-prev {

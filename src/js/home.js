@@ -66,6 +66,31 @@ function home() {
         },
       }
     });
+
+    //////////////////////////////////////
+    var swiper = new Swiper('#testimonials .swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 2,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          centeredSlides: true,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        }
+      }
+    });
   }
 
   toggleAccordion = function (ele) {
