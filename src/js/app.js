@@ -148,6 +148,8 @@ $(document).ready(function () {
         }
 
     })
+    home();
+
 
 });
-console.log("Custome App  Loaded");
+console.log("Custome App  Loaded 01");

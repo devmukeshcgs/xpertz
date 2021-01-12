@@ -13,7 +13,7 @@
         // border-bottom: 5px solid $clr-dark-orange;
         @include transition(all 0.3s ease 0.4s);
         // padding: 20px 0px 20px 0px;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
 
         &.no-border {
             // border-bottom: 0px solid $clr-dark-orange;
@@ -33,7 +33,7 @@
                     text-transform: uppercase;
                     padding-top: 5px;
                     padding-bottom: 5px;
-                    font-weight: bold;
+                    font-weight: $font-semi-bold;
 
                     @media (max-width: 768px) {
                         font-size: 11px;
@@ -56,7 +56,6 @@
                     &:focus {
                         color: $clr-default;
                         background: transparent;
-                        font-weight: bold;
                     }
 
                     span {
