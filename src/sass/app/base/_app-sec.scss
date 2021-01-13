@@ -37,6 +37,14 @@
                 color: #555555 !important;
             }
         }
+
+        &.search-result-text {
+            span {
+                font-size: 28px;
+                color: #555555;
+                font-weight: $font-normal;
+            }
+        }
     }
 
     .sub-title {

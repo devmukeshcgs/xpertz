@@ -63,6 +63,16 @@
             }
         }
 
+        &.typ-cancle {
+            border: 2px solid $clr-gray;
+            color: $clr-gray;
+            background: transparent;
+            @include transition(all 0.3s ease 0.4s);
+
+            &:hover {
+                color: $clr-gray;
+            }
+        }
 
         &:hover,
         &.active {

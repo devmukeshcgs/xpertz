@@ -32,6 +32,7 @@ $(".show-hide-sec-body").click(function () {
 });
 
 
+
 $(document).ready(function () {
 
     if (typeof XPERTZ !== undefined) {

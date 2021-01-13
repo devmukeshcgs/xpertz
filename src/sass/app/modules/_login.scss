@@ -1,0 +1,151 @@
+.login-cont {
+    padding: 20px 50px;
+
+    h2 {
+        font-size: 24px;
+        font-weight: $font-normal;
+        color: $clr-default;
+        margin: 20px 0px;
+    }
+
+    form {
+        .form-control {
+            padding: 9px 10px;
+            border: 1px solid $clr-default;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 400;
+            color: #000;
+            position: relative;
+            box-shadow: none;
+            height: auto;
+            border-radius: 5px;
+            background-color: transparent;
+        }
+
+        .forget-pass {
+            color: $clr-default;
+            text-align: right;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .or {
+            margin: 15px 0px;
+            text-align: center;
+            font-weight: $font-light;
+        }
+
+        .alt-login {
+            width: 100%;
+
+            button {
+                width: 100%;
+            }
+
+        }
+
+        .signup-link {
+            color: $clr-default;
+            margin-top: 15px;
+
+            a {
+                font-weight: $font-semi-bold;
+            }
+        }
+    }
+}
+
+.signup-cont {
+    padding: 20px 50px;
+
+    h2 {
+        font-size: 24px;
+        font-weight: $font-normal;
+        color: $clr-default;
+        margin: 20px 0px;
+    }
+
+    form {
+        .form-group {
+            position: relative;
+            margin-bottom: 25px;
+
+            label {
+                position: absolute;
+                color: $clr-default;
+                z-index: 2;
+                background: $clr-root;
+                top: -6px;
+                left: 10px;
+                padding: 0px 4px;
+            }
+        }
+
+        .form-control {
+            padding: 12px 10px;
+            border: 1px solid $clr-default;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 400;
+            color: #000;
+            position: relative;
+            box-shadow: none;
+            height: auto;
+            border-radius: 5px;
+            background-color: transparent;
+        }
+
+        .in-group {
+            display: flex;
+
+            .form-group {
+                position: relative;
+
+                label {
+                    position: absolute;
+                    color: $clr-default;
+                    z-index: 2;
+                }
+
+                &.code {
+                    width: 30%;
+                    margin-right: 6px;
+                }
+
+                &.phone {
+                    width: 70%;
+                    margin-left: 6px;
+
+                }
+
+                .form-control {}
+            }
+        }
+
+        .or {
+            margin: 15px 0px;
+            text-align: center;
+            font-weight: $font-light;
+        }
+
+        .alt-login {
+            width: 100%;
+
+            button {
+                width: 100%;
+            }
+
+        }
+
+        .signup-link {
+            color: $clr-default;
+            margin-top: 15px;
+            text-align: center;
+
+            a {
+                font-weight: $font-semi-bold;
+            }
+        }
+    }
+}

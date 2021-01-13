@@ -1,10 +1,14 @@
 function home() {
   console.log("HOME PAGE JS")
-  var init, bindEvents, toggleAccordion, closeOtherAccordions;
+  var init, bindEvents, mobNav, toggleAccordion, closeOtherAccordions;
   init = function () {
     if ($('#top-picks-slider').length > 0) {
       bindEvents();
     }
+
+
+    mobNav();
+
   }
 
   bindEvents = function () {
@@ -91,6 +95,26 @@ function home() {
         }
       }
     });
+  }
+  mobNav = function () {
+    setTimeout(() => {
+      if ($('.js-mob-nav').length > 0) {
+        $('.js-mob-nav > ul > li').click(function () {
+          console.log("CLICKED on NAV")
+
+          $('.js-mob-nav > ul > li').removeClass("active");
+          $(this).addClass("active");
+        });
+      }
+
+      if ($('.categories-list').length > 0) {
+        $('.categories-list > ul >li').click(function () {
+          console.log("CLICKED on LIST", $(this))
+          $('.categories-list > ul >li').removeClass("active");
+          $(this).addClass("active");
+        });
+      }
+    }, 3000);
   }
 
   toggleAccordion = function (ele) {

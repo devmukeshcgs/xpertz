@@ -1,9 +1,8 @@
     /* xpertz-header */
 
     .xpertz-header {
-        &.list-tabs {
-            padding: 20px 0px 0px 0px;
-        }
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.06);
+        // border: 1px solid #ccc;
 
         &.add-header-space {
             padding: 20px 0px 60px 0px;
@@ -13,16 +12,9 @@
         // border-bottom: 5px solid $clr-dark-orange;
         @include transition(all 0.3s ease 0.4s);
         // padding: 20px 0px 20px 0px;
-        // margin-bottom: 10px;
+        margin-bottom: 5px;
 
-        &.no-border {
-            // border-bottom: 0px solid $clr-dark-orange;
-        }
 
-        @media screen and (max-width: 480px) {
-            background-position: 150% center;
-            padding: 20px 0px 20px 0px;
-        }
 
         .nav {
             >li {
@@ -76,13 +68,12 @@
                     }
 
                     &.user-pic-btn {
-                        // padding: 5px;
                         padding-top: 0px;
 
                         .user-pic {
-                            // background-image: url($Images/"user.jpg");
+                            // background-image: url('./images/user.svg');
                             background-size: cover;
-                            display: block;
+                            display: inline-block;
                             width: 30px;
                             height: 30px;
                             border-radius: 20px;
@@ -90,6 +81,16 @@
                             padding: 6px;
                             color: #000;
                             font-size: 12px;
+                        }
+
+                        .u-details {
+                            display: inline-block;
+                            max-width: 150px;
+
+                            span {
+                                display: block;
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
@@ -140,6 +141,30 @@
             }
         }
 
+        form {
+            max-width: 200px;
+
+            .form-control {
+                border-radius: 5px;
+                border: 1px solid #E1E1E1;
+                padding: 12px 8px 12px 50px;
+                position: relative;
+                background-image: url(../images/search-gray.svg);
+                background-repeat: no-repeat;
+                background-position: 10px center;
+                width: 100%;
+
+                &::after {
+                    width: 50px;
+                    height: 50px;
+                    background: royalblue;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
         // MOBILE LEAD
         .lead-btn {
             &.mob {}
@@ -159,7 +184,236 @@
                 }
             }
         }
+
+        .mob-page {
+            @media screen and (max-width: 480px) {
+                .page-name {
+                    color: $clr-root;
+                    font-size: 16px;
+                    display: inline-block;
+                    padding: 14px 0px 14px 10px;
+                }
+
+                ul {
+                    float: right;
+                    display: inline-block;
+                    padding-right: 10px;
+                    position: relative;
+                    margin: 0px;
+
+                    >li {
+                        padding: 8px 0px;
+
+                        &.nav-icon>a {
+                            font-size: 16px;
+                            color: $clr-root;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mob-nav {
+            display: none;
+        }
+
+        /////////////////////////////////////////////////////////////////////////
+        @media screen and (max-width: 480px) {
+            background: $clr-default;
+
+            .mob-nav {
+                display: block;
+                position: fixed;
+                bottom: 0px;
+                right: 0px;
+                left: 0px;
+                background: #fff;
+                z-index: 5;
+
+                ul {
+                    padding: 12px 20px;
+                    margin: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    align-items: flex-start;
+                    background: #fff;
+                    box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.04);
+
+                    li {
+                        list-style: none;
+                        text-align: center;
+                        // transition: .3s ease all;
+
+                        a {
+                            font-weight: $font-semi-bold;
+                            color: $clr-default;
+                            display: inline-block;
+                            padding: 10px 15px;
+                            font-size: 12px;
+
+                            img {
+                                margin-right: 5px;
+                            }
+
+                            span {
+                                display: none;
+                            }
+                        }
+
+                        .sub-menu {
+                            display: none;
+
+                            form {
+                                .form-control {
+                                    border-radius: 5px;
+                                    border: 1px solid #E1E1E1;
+                                    padding: 12px 8px 12px 50px;
+                                    position: relative;
+                                    background-image: url(../images/search-gray.svg);
+                                    background-repeat: no-repeat;
+                                    background-position: 10px center;
+
+                                    &::after {
+                                        width: 50px;
+                                        height: 50px;
+                                        background: royalblue;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.active {
+                            a {
+                                display: block;
+                                border-radius: 25px;
+                                background-color: #006FBC2C;
+                                transition: .3s ease background-color, position;
+
+                                img {
+                                    display: inline-block;
+                                }
+
+                                span {
+                                    display: inline-block;
+                                    transition: .3s ease background-color, position;
+
+                                }
+                            }
+
+                            .sub-menu {
+                                background: #ffffff;
+                                padding: 10px;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                z-index: -1;
+                                display: block;
+
+                                .trending-list {
+                                    width: 100%;
+
+                                    h2 {
+                                        font-size: 16px;
+                                        color: #919191;
+                                        text-align: left;
+                                    }
+
+                                    ul {
+                                        flex-wrap: wrap;
+
+                                        li {
+                                            margin-bottom: 5px;
+                                            transition: .2s ease all;
+
+                                            a {
+                                                color: #919191;
+                                                background: #9191911C;
+                                                font-weight: $font-light;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .categories-list {
+                                    width: 100%;
+
+                                    h2 {
+                                        font-size: 16px;
+                                        color: #919191;
+                                        text-align: left;
+                                    }
+
+                                    ul {
+                                        display: block;
+                                        padding: 0px;
+
+                                        li {
+                                            display: block;
+                                            width: 100%;
+                                            margin: 5px 0px;
+                                            text-align: left;
+                                            // border-bottom: 1px solid #ccc;
+                                            transition: .2s ease all;
+
+                                            a {
+                                                border-radius: 0px;
+                                                color: #919191;
+                                                background-color: #ffffff;
+                                                font-weight: $font-regular;
+                                            }
+
+                                            ul {
+                                                display: none;
+                                            }
+
+                                            &.active {
+                                                transition: .2s ease all;
+
+                                                >a {
+                                                    background: $clr-default;
+                                                    color: $clr-root;
+                                                }
+
+                                                ul {
+                                                    display: block;
+                                                    width: 100%;
+                                                    position: relative;
+                                                    max-height: 300px;
+                                                    min-height: 0px;
+                                                    overflow-y: scroll;
+
+                                                    li {
+                                                        transform: none;
+                                                        margin: 0px;
+
+                                                        a {
+                                                            text-align: right;
+                                                            border-radius: 0px;
+                                                            color: #919191;
+                                                            // background-color: #000;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
     }
+
 
     .xpertz-row {
         display: table;
