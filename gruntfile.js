@@ -43,9 +43,9 @@ module.exports = function (grunt) {
         cssmin: {
             deps: {
                 src: [
-                    'src/css/icheck-1.x/skins/all.css',
-                    'src/css/bootstrap-datetimepicker/bootstrap-datetimepicker.css',
-                    'src/css/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css',
+                    // 'src/css/icheck-1.x/skins/all.css',
+                    // 'src/css/bootstrap-datetimepicker/bootstrap-datetimepicker.css',
+                    // 'src/css/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css',
                     'src/css/swiper-bundle/swiper-bundle.css'
 
                 ],
@@ -74,26 +74,28 @@ module.exports = function (grunt) {
                 src: ['src/js/jquery.min.js',
                     'src/js/bootstrap.js'
                 ],
-                dest: `dist/js/bootstrap_${config.appName}`,
+                dest: `dist/js/bootstrap_${config.appName}.js`,
             },
             deps: {
                 src: [
-                    'src/js/jquery.min.js',
-                    'src/js/plugins/swiper-bundle.js',
 
-                    'src/js/plugins/jquery.jquery.parallax-1.1.3.js',
-                    'src/js/plugins/jquery.sliderPro.min.js',
-                    'src/js/plugins/owl.carousel.js',
-                    'src/js/plugins/TweenMax.min.js',
-                    'src/js/plugins/ScrollMagic.min.js',
-                    'src/js/plugins/animation.gsap.min.js',
-                    'src/js/plugins/moment.min.js',
-                    'src/js/plugins/jquery.mCustomScrollbar.min.js',
-                    'src/js/plugins/bootstrap-datetimepicker.min.js',
-                    'src/js/plugins/icheck.min.js',
-                    'src/js/plugins/jquery.validate.min.js',
+                    'src/js/plugins/swiper-bundle.js',
+                    'src/js/globle.js',
                     'src/js/home.js',
+                    'src/js/search.js',
                     'src/js/app.js'
+
+                    // 'src/js/plugins/jquery.jquery.parallax-1.1.3.js',
+                    // 'src/js/plugins/jquery.sliderPro.min.js',
+                    // 'src/js/plugins/owl.carousel.js',
+                    // 'src/js/plugins/TweenMax.min.js',
+                    // 'src/js/plugins/ScrollMagic.min.js',
+                    // 'src/js/plugins/animation.gsap.min.js',
+                    // 'src/js/plugins/moment.min.js',
+                    // 'src/js/plugins/jquery.mCustomScrollbar.min.js',
+                    // 'src/js/plugins/bootstrap-datetimepicker.min.js',
+                    // 'src/js/plugins/icheck.min.js',
+                    // 'src/js/plugins/jquery.validate.min.js',
                 ],
                 dest: 'dist/js/app_xpertz.js'
             },
@@ -132,6 +134,20 @@ module.exports = function (grunt) {
                     src: ['**/*.{png,jpg,gif}'],
                     dest: 'dist/images/tiny/'
                 }]
+            }
+        },
+        webfont: {
+            icons: {
+                src: 'src/icons/*.svg',
+                dest: 'dist/icon-font',
+                options: {
+                    syntax: 'bem',
+                    templateOptions: {
+                        baseClass: 'tn-icon',
+                        classPrefix: 'tn-',
+                        mixinPrefix: 'tn-'
+                    }
+                }
             }
         },
         browserSync: {

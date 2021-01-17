@@ -1,8 +1,9 @@
     /* xpertz-header */
 
     .xpertz-header {
-        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.06);
+        // box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.06);
         // border: 1px solid #ccc;
+        padding: 15px 0px;
 
         &.add-header-space {
             padding: 20px 0px 60px 0px;
@@ -12,19 +13,17 @@
         // border-bottom: 5px solid $clr-dark-orange;
         @include transition(all 0.3s ease 0.4s);
         // padding: 20px 0px 20px 0px;
-        margin-bottom: 5px;
-
+        // margin-bottom: 5px;
 
 
         .nav {
             >li {
-                padding: 10px 5px;
+                // padding: 10px 5px;
 
                 >a {
                     color: $clr-default;
                     text-transform: uppercase;
-                    padding-top: 5px;
-                    padding-bottom: 5px;
+                    padding: 8px 15px;
                     font-weight: $font-semi-bold;
 
                     @media (max-width: 768px) {
@@ -59,28 +58,33 @@
                             font-size: 8px;
                             display: block;
                             position: absolute;
-                            top: -3px;
+                            top: 0px;
                             line-height: 15px;
-                            right: -1px;
+                            right: 4px;
                             color: $clr-root;
                             background: $clr-primary;
                         }
                     }
 
                     &.user-pic-btn {
-                        padding-top: 0px;
+                        padding: 0px;
+                        margin-left: 15px;
+                        text-transform: unset;
 
                         .user-pic {
-                            // background-image: url('./images/user.svg');
+                            background-image: url(../images/ios.png);
+                            background-size: initial;
+                            background-position: center center;
                             background-size: cover;
                             display: inline-block;
-                            width: 30px;
-                            height: 30px;
+                            width: 40px;
+                            height: 40px;
                             border-radius: 20px;
-                            background-color: #ccc;
+                            background-color: rgb(71, 71, 71);
                             padding: 6px;
                             color: #000;
-                            font-size: 12px;
+                            position: relative;
+                            margin-bottom: -7px;
                         }
 
                         .u-details {
@@ -90,64 +94,86 @@
                             span {
                                 display: block;
                                 font-size: 12px;
+                                line-height: normal;
                             }
                         }
                     }
                 }
 
                 &.nav-icon {
-                    font-size: 18px;
 
+
+                    // font-size: 18px;
                     >a {
                         color: $clr-default;
 
                         &:hover,
                         &:focus {
-                            color: $clr-primary;
+                            color: $clr-default;
                             background: transparent;
                         }
+
+                        i {
+                            font-size: 18px;
+                        }
+                    }
+
+                    &:nth-last-child(2) {
+                        margin-left: 20px;
                     }
                 }
 
                 &.create-new {
+                    margin: 0px 5px;
+
                     a {
-                        button {}
+                        padding: 6px 15px;
                     }
+
+                    &:nth-last-child(2) {
+                        margin-left: 20px;
+                    }
+
                 }
 
-                .new-lead {
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 15px;
-                    display: block;
-                    background: #008256;
-                    -moz-border-radius: 8px;
-                    box-shadow: 0px 5px 15px #000000;
-                    -webkit-box-shadow: 0px 5px 15px #000000;
-                    -moz-box-shadow: 0px 5px 15px #000000;
-                    text-align: center;
-                    color: #fff;
-                }
             }
 
+            &.nav-gp {
+                .dropdown-menu {
+                    border: 0px;
+
+                    li {
+                        a {
+                            padding: 8px 20px;
+                            font-size: 14px;
+
+                            img {
+                                margin-right: 4px;
+                                width: 15px;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .navbar-brand {
             height: auto;
-            padding: 5px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
 
             img {
-                height: 40px !important;
+                height: 38px !important;
             }
         }
 
         form {
             max-width: 200px;
+            margin: 0px;
 
             .form-control {
                 border-radius: 5px;
                 border: 1px solid #E1E1E1;
-                padding: 12px 8px 12px 50px;
+                padding: 10px 8px 10px 35px;
                 position: relative;
                 background-image: url(../images/search-gray.svg);
                 background-repeat: no-repeat;
@@ -163,30 +189,17 @@
                     left: 0;
                 }
             }
-        }
 
-        // MOBILE LEAD
-        .lead-btn {
-            &.mob {}
-        }
+            @media screen and (max-width: 480px) {
+                max-width: none;
 
-        .create-new {
-            // margin-top: -5px;
-
-            .cre-btn {
-                color: #fff;
-
-                @media(max-width: 768px) {
-                    padding-left: 5px;
-                    padding-right: 5px;
-                    font-size: 11px;
-                    min-width: 100px;
-                }
             }
         }
 
-        .mob-page {
-            @media screen and (max-width: 480px) {
+        @media screen and (max-width: 480px) {
+            padding: 3px 10px;
+
+            .mob-page {
                 .page-name {
                     color: $clr-root;
                     font-size: 16px;
@@ -207,6 +220,10 @@
                         &.nav-icon>a {
                             font-size: 16px;
                             color: $clr-root;
+
+                            i {
+                                font-size: 20px;
+                            }
                         }
                     }
                 }
@@ -220,6 +237,10 @@
         /////////////////////////////////////////////////////////////////////////
         @media screen and (max-width: 480px) {
             background: $clr-default;
+            position: fixed;
+            z-index: 99;
+            left: 0;
+            right: 0;
 
             .mob-nav {
                 display: block;
@@ -262,30 +283,47 @@
                             }
                         }
 
-                        .sub-menu {
-                            display: none;
+                        // .sub-menu {
+                        //     display: none;
 
-                            form {
-                                .form-control {
-                                    border-radius: 5px;
-                                    border: 1px solid #E1E1E1;
-                                    padding: 12px 8px 12px 50px;
-                                    position: relative;
-                                    background-image: url(../images/search-gray.svg);
-                                    background-repeat: no-repeat;
-                                    background-position: 10px center;
+                        //     form {
+                        //         .form-group {
+                        //             .mob-filter-btn {
+                        //                 display: block;
+                        //                 position: absolute;
+                        //                 top: 0px;
+                        //                 right: 0px;
 
-                                    &::after {
-                                        width: 50px;
-                                        height: 50px;
-                                        background: royalblue;
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                    }
-                                }
-                            }
-                        }
+                        //                 a {
+                        //                     background: transparent;
+                        //                     font-size: 14px;
+                        //                     color: #ccc;
+                        //                     border-radius: 0px;
+                        //                     padding: 12px;
+                        //                 }
+                        //             }
+
+                        //             .form-control {
+                        //                 border-radius: 5px;
+                        //                 border: 1px solid #E1E1E1;
+                        //                 padding: 12px 8px 12px 50px;
+                        //                 position: relative;
+                        //                 background-image: url(../images/search-gray.svg);
+                        //                 background-repeat: no-repeat;
+                        //                 background-position: 10px center;
+
+                        //                 &::after {
+                        //                     width: 50px;
+                        //                     height: 50px;
+                        //                     background: royalblue;
+                        //                     position: absolute;
+                        //                     top: 0;
+                        //                     left: 0;
+                        //                 }
+                        //             }
+                        //         }
+                        //     }
+                        // }
 
                         &.active {
                             a {
@@ -309,12 +347,14 @@
                                 background: #ffffff;
                                 padding: 10px;
                                 position: fixed;
-                                top: 0;
+                                top: 60;
                                 left: 0;
                                 right: 0;
                                 bottom: 0;
                                 z-index: -1;
                                 display: block;
+                                overflow-y: scroll;
+                                padding-bottom: 70px;
 
                                 .trending-list {
                                     width: 100%;
@@ -733,3 +773,5 @@
     .prof-info {
         margin-right: 15px;
     }
+
+    //////////////////@at-root

@@ -1,6 +1,98 @@
 .banner {
-    height: 410px;
-    background-color: turquoise;
+    // height: 410px;
+    // position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 75px;
+
+    .upcoming-evnt {
+        background: $clr-root;
+        border-radius: 4px;
+        overflow: hidden;
+        width: 350px;
+        padding: 10px 15px;
+
+        h4 {
+            color: #cccccc;
+            margin: 0px;
+            margin-bottom: 15px;
+        }
+
+        .evnt-info {
+            display: flex;
+
+            .img {
+                // display: inline-block;
+
+                img {
+                    width: 75px;
+                }
+            }
+
+            .evnt-detail {
+                padding-left: 10px;
+
+                // display: inline-block;
+                div {
+                    margin-bottom: 8px;
+                    font-weight: $font-medium;
+                }
+
+                .name {
+                    color: $clr-gray;
+                }
+
+                .time {
+                    font-weight: $font-bold;
+                }
+
+                .cal {
+                    a {
+                        color: $clr-primary;
+                        font-weight: $font-medium;
+
+                        &:hover {
+                            text-decoration: none;
+                            color: $clr-default;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .info-cont {
+        position: relative;
+
+        .info {
+            // position: absolute;
+            // width: 35%;
+            text-align: center;
+            bottom: 85px;
+
+            h1 {
+                font-size: 36px;
+                font-weight: $font-semi-bold;
+                text-transform: uppercase;
+                color: $clr-root;
+
+                span {
+                    display: block;
+                    color: $clr-primary;
+
+                }
+            }
+
+            h3 {
+                font-size: 18px;
+                line-height: 22px;
+                color: $clr-root;
+                font-weight: $font-medium;
+            }
+        }
+    }
 
     @media(max-width:480px) {
         display: none;

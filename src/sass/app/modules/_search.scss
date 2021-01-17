@@ -1,8 +1,170 @@
+.mob-search-page {
+    padding-top: 70px;
+
+    .sub-menu {
+        // background: #000000;
+        padding: 20px;
+        // position: fixed;
+        // top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        display: block;
+        overflow-y: scroll;
+        padding-bottom: 70px;
+
+        form {
+            .form-group {
+                .mob-filter-btn {
+                    display: block;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    padding: 16px;
+
+                    a {
+                        background: transparent;
+                        font-size: 16px;
+                        color: #ccc;
+                        border-radius: 0px;
+                    }
+                }
+
+                .form-control {
+                    border-radius: 5px;
+                    border: 1px solid #E1E1E1;
+                    padding: 14px 10px 14px 40px;
+                    position: relative;
+                    background-image: url(../images/search-gray.svg);
+                    background-repeat: no-repeat;
+                    background-position: 10px center;
+                    font-size: 16px;
+
+
+                    &::after {
+                        width: 50px;
+                        height: 50px;
+                        background: royalblue;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        .search-trending-list {
+            width: 100%;
+
+            h2 {
+                font-size: 16px;
+                color: #919191;
+                text-align: left;
+            }
+
+            ul {
+                padding: 0px;
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    margin-bottom: 5px;
+                    transition: .2s ease all;
+                    list-style: none;
+                    margin-right: 8px;
+
+                    a {
+                        padding: 10px 20px;
+                        color: #919191;
+                        display: inline-block;
+                        background: #9191911C;
+                        font-weight: $font-light;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+
+        .search-categories-list {
+            width: 100%;
+
+            h2 {
+                font-size: 16px;
+                color: #919191;
+                text-align: left;
+            }
+
+            ul {
+                display: block;
+                padding: 0px;
+
+                li {
+                    display: block;
+                    width: 100%;
+                    margin: 5px 0px;
+                    text-align: left;
+                    // border-bottom: 1px solid #ccc;
+                    transition: .2s ease all;
+                    list-style: none;
+
+                    a {
+                        border-radius: 0px;
+                        color: #919191;
+                        background-color: #ffffff;
+                        font-weight: $font-regular;
+                        padding: 12px;
+                        display: block;
+                    }
+
+                    ul {
+                        display: none;
+                    }
+
+                    &.active {
+                        transition: .2s ease all;
+
+                        >a {
+                            background: $clr-default;
+                            color: $clr-root;
+                        }
+
+                        ul {
+                            display: block;
+                            width: 100%;
+                            position: relative;
+                            max-height: 300px;
+                            min-height: 0px;
+                            overflow-y: scroll;
+
+                            li {
+                                transform: none;
+                                margin: 0px;
+
+                                a {
+                                    text-align: right;
+                                    border-radius: 0px;
+                                    color: #919191;
+                                    // background-color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .filters {
     padding: 20px;
     border: 1px solid #E1E1E1;
     box-sizing: border-box;
     color: #555555;
+
+    @media(max-width:480px) {
+        display: none;
+    }
 
     .heading {
         font-size: 18px;
@@ -27,6 +189,39 @@
 
     .action-cta {
         margin-top: 25px;
+    }
+
+    &.mob-filter-show {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background: $clr-root;
+        padding-top: 100px;
+        padding-bottom: 60px;
+        display: block;
+
+        .heading {
+            display: none;
+        }
+
+        .action-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 15px;
+            display: flex;
+
+            button {
+                flex: 1;
+                margin: 0px 5px;
+            }
+        }
     }
 }
 
@@ -76,5 +271,36 @@
         }
     }
 
-    @media(max-width:480px) {}
+    @media(max-width:480px) {
+        padding: 12px;
+        border-radius: 2px;
+        margin-bottom: 5px;
+
+        .s-img {
+            border-radius: 4px;
+            overflow: hidden;
+
+            img {
+                width: 70px;
+            }
+        }
+
+        .s-details {
+
+            h2 {
+                font-size: 14px;
+                font-weight: $font-semi-bold;
+                margin-top: 3px;
+                margin-bottom: 6px;
+            }
+
+            .name {}
+
+            p {
+                display: none;
+            }
+
+            .views {}
+        }
+    }
 }

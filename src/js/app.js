@@ -19,19 +19,8 @@ if (!window.console) {
 }
 
 $(window).on("load", function () {
-    $(".mcs").mCustomScrollbar();
+    // $(".mcs").mCustomScrollbar(); 
 });
-
-$("show-hide-sec-body").on("click", function () {
-
-});
-$(".show-hide-sec-body").click(function () {
-    $(".js-show-hide-sec-body").slideToggle("slow", function () {
-        // Animation complete.
-    });
-});
-
-
 
 $(document).ready(function () {
 
@@ -43,24 +32,24 @@ $(document).ready(function () {
         console.log("onorientationchange");
     }
 
-    $.ajax({
-        type: "GET",
-        url: "navigation.html",
-        data: {},
-        success: function (data) {
-            $('#inc-navigation').html(data);
-            console.log("onorientationchange");
-        }
-    });
+    // $.ajax({
+    //     type: "GET",
+    //     url: "navigation.html",
+    //     data: {},
+    //     success: function (data) {
+    //         $('#inc-navigation').html(data);
+    //         console.log("onorientationchange");
+    //     }
+    // });
 
-    $.ajax({
-        type: "GET",
-        url: "footer.html",
-        data: {},
-        success: function (data) {
-            $('#inc-footer').html(data);
-        }
-    });
+    // $.ajax({
+    //     type: "GET",
+    //     url: "footer.html",
+    //     data: {},
+    //     success: function (data) {
+    //         $('#inc-footer').html(data);
+    //     }
+    // });
 
 
     if ($(window).width() < 767) {
@@ -90,67 +79,7 @@ $(document).ready(function () {
         //     // }
         // });
     }
-
-    $("form0").validate({
-        errorClass: 'help-block animation-slideDown',
-        // You can change the animation class for a different entrance animation - check animations page
-        errorElement: 'div',
-        errorPlacement: function (error, e) {
-            e.parents('.form-group > div').append(error);
-        },
-        highlight: function (e) {
-            $(e).closest('.form-group').removeClass('has-success has-error').addClass('has-error');
-            $(e).closest('.help-block').remove();
-        },
-        success: function (e) {
-            // You can use the following if you would like to highlight with green color the input after successful validation!
-            e.closest('.form-group').removeClass('has-success has-error');
-            // e.closest('.form-group').removeClass('has-success has-error').addClass('has-success');
-            e.closest('.help-block').remove();
-        },
-        rules: {},
-        messages: {}
-    });
-
-
-    $("#submit").click(function () {
-
-        console.log("alert");
-
-    })
-
-    $("#otp").validate({
-        errorClass: 'help-block animation-slideDown', // You can change the animation class for a different entrance animation - check animations page
-        errorElement: 'div',
-        errorPlacement: function (error, e) {
-            e.parents('.form-group > div').append(error);
-        },
-        highlight: function (e) {
-            $(e).closest('.form-group').removeClass('has-success has-error').addClass('has-error');
-            $(e).closest('.help-block').remove();
-        },
-        success: function (e) {
-            // You can use the following if you would like to highlight with green color the input after successful validation!
-            e.closest('.form-group').removeClass('has-success has-error'); // e.closest('.form-group').removeClass('has-success has-error').addClass('has-success');
-            e.closest('.help-block').remove();
-        },
-        rules: {
-            var_enterotp: {
-                required: true,
-                minlength: 3
-            },
-        },
-        messages: {
-            var_enterotp: {
-                required: 'Please enter a firstname',
-                minlength: 'Your firstname must consist of at least 3 characters'
-            },
-
-        }
-
-    })
     home();
-
-
+    search();
 });
-console.log("Custome App  Loaded 01");
+console.log("Custome App  Loaded 03");

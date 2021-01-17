@@ -9,6 +9,10 @@ html a {
     -webkit-font-smoothing: antialiased !important;
 }
 
+.stop-scroll {
+    position: fixed;
+}
+
 /* colors */
 
 $clr-root: #ffffff;

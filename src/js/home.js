@@ -2,20 +2,17 @@ function home() {
   console.log("HOME PAGE JS")
   var init, bindEvents, mobNav, toggleAccordion, closeOtherAccordions;
   init = function () {
-    if ($('#top-picks-slider').length > 0) {
-      bindEvents();
-    }
-
-
+    if ($('#top-picks-slider').length > 0) {}
     mobNav();
-
+    userDropDown();
+    bindEvents();
   }
 
   bindEvents = function () {
     console.log("STEP 01")
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('#top-picks-slider .swiper-container ', {
       slidesPerView: 2,
-      spaceBetween: 2,
+      spaceBetween: 20,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -26,7 +23,7 @@ function home() {
       },
       breakpoints: {
         480: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 20,
           centeredSlides: true,
         },
@@ -96,15 +93,27 @@ function home() {
       }
     });
   }
+  userDropDown = function () {
+    setTimeout(() => {
+      if ($('.user-pic-btn').length > 0) {
+        $('.user-pic-btn').click(function () {
+          console.log("CLICKED on NAV");
+          $(".dropdown-menu").toggle();
+        })
+      }
+    }, 2000);
+  }
   mobNav = function () {
     setTimeout(() => {
       if ($('.js-mob-nav').length > 0) {
-        $('.js-mob-nav > ul > li').click(function () {
-          console.log("CLICKED on NAV")
 
+        $('.js-mob-nav > ul > li').click(function () {
           $('.js-mob-nav > ul > li').removeClass("active");
           $(this).addClass("active");
+          // $("body").toggleClass("stop-scroll");
+          console.log("CLICKED on NAV")
         });
+
       }
 
       if ($('.categories-list').length > 0) {
