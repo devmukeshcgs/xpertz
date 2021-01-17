@@ -1,6 +1,4 @@
 .mob-search-page {
-    padding-top: 70px;
-
     .sub-menu {
         // background: #000000;
         padding: 20px;
@@ -189,6 +187,16 @@
 
     .action-cta {
         margin-top: 25px;
+        position: relative;
+        display: flex;
+        width: 100%;
+        text-align: center;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        button {
+            width: 48%;
+        }
     }
 
     &.mob-filter-show {

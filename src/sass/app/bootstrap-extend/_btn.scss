@@ -57,9 +57,9 @@
             @include transition(all 0.3s ease 0.4s);
 
             &:hover {
+                background-color: $clr-root;
                 color: $clr-default;
                 // font-weight: bold;
-
             }
         }
 

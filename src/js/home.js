@@ -11,7 +11,7 @@ function home() {
   bindEvents = function () {
     console.log("STEP 01")
     var swiper = new Swiper('#top-picks-slider .swiper-container ', {
-      slidesPerView: 2,
+      slidesPerView: 2.5,
       spaceBetween: 20,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -41,7 +41,7 @@ function home() {
 
     //////////////////////////////////////
     var swiper = new Swiper('#popular-packages .swiper-container', {
-      slidesPerView: 2,
+      slidesPerView: 2.5,
       spaceBetween: 2,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -70,7 +70,7 @@ function home() {
 
     //////////////////////////////////////
     var swiper = new Swiper('#testimonials .swiper-container', {
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 2,
       navigation: {
         nextEl: '.swiper-button-next',

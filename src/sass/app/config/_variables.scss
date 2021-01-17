@@ -9,6 +9,12 @@ html a {
     -webkit-font-smoothing: antialiased !important;
 }
 
+main {
+    @media(max-width:480px) {
+        padding-top: 65px;
+    }
+}
+
 .stop-scroll {
     position: fixed;
 }
@@ -44,6 +50,29 @@ $font-semi-bold:600;
 $font-bold:700;
 $font-extra-bold:800;
 
+// SCROLLBAR
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .thin {
     font-weight: $font-light;
 }
@@ -78,25 +107,3 @@ $screen-md:768px;
 $mobile-breakpoint: 768px;
 $screen-ms:480px;
 $screen-xs:320px;
-
-//TEXT TRANFORN
-.u-case {
-    text-transform: uppercase;
-}
-
-// TEXT COLOR
-.text-grey {
-    color: #7a909a;
-}
-
-.text-white {
-    color: $clr-root;
-}
-
-.tetx-orange {
-    color: $clr-dark-orange;
-}
-
-.mcs {
-    max-height: 400px;
-}
