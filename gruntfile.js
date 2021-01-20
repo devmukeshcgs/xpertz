@@ -78,7 +78,7 @@ module.exports = function (grunt) {
             },
             deps: {
                 src: [
-
+                    'dist/js/bootstrap_xpertz.js',
                     'src/js/plugins/swiper-bundle.js',
                     'src/js/globle.js',
                     'src/js/home.js',

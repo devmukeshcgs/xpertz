@@ -1,0 +1,315 @@
+.my-interviews {
+    @media screen and (max-width:480px) {
+        .app-sec {
+            padding-top: 0px;
+        }
+
+        .sec-head {
+            margin: 0;
+        }
+    }
+}
+
+.interviews {
+    .interview {
+        padding: 30px;
+        margin-top: 10px;
+        border: 1px solid #E1E1E1;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+
+        .date {
+            color: #555555;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .media-heading {
+            color: $clr-default;
+        }
+    }
+
+    .cta {
+        display: flex;
+
+        a {
+            display: inline-block;
+            padding: 10px 30px;
+            color: #A1A1A1;
+
+            &:hover {
+                text-decoration: none;
+
+                &.details {
+                    color: $clr-default;
+                }
+
+                &.reschedule {
+                    color: $clr-primary;
+
+                }
+
+                &.cancel {
+                    color: red;
+
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:480px) {
+        .interview {
+            display: block;
+            padding: 20px;
+
+            .media-heading {
+                color: #555555;
+                font-size: 14px;
+
+            }
+
+            .date {
+                color: $clr-base;
+                font-size: 14px;
+                font-weight: 600;
+
+                span {
+                    font-size: inherit;
+                }
+            }
+
+            .cta {
+                display: none;
+            }
+
+            .schedule {
+                color: $clr-primary;
+
+                a {
+                    color: inherit;
+
+                    &.cal-added {
+                        color: green;
+
+                        i {
+                            color: inherit;
+                        }
+                    }
+
+                    &.see-details {
+                        color: $clr-default;
+
+                        i {
+                            color: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.int-details {
+    .int-detail-section {
+        .vid-sec {
+            margin-bottom: 25px;
+        }
+
+        .int-detail {
+            display: flex;
+            margin-bottom: 30px;
+
+
+
+            .media-heading {
+                font-size: 20px;
+                font-weight: 600;
+                color: #191919;
+            }
+
+            .cta-download {
+                color: $clr-default;
+                font-weight: 500;
+
+                a {
+                    display: block;
+                    min-width: 200px;
+                    text-align: right;
+
+                    i {
+                        display: inline-block;
+                        font-size: 24px;
+                        position: relative;
+                        top: 5px;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        line-height: 24px;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            @media(max-width:480px) {
+                display: block;
+
+                .cta-download {
+                    margin: 10px 0px;
+
+                    a {
+
+                        text-align: left;
+                    }
+                }
+            }
+
+
+            .date {
+                font-size: 14px;
+                color: #555555;
+                font-weight: 500;
+
+            }
+        }
+
+    }
+
+    .feedback {
+        margin: 15px 0px;
+        font-weight: 500;
+        color: #555555;
+
+        .rating {
+            span {
+                display: inline-block;
+                color: #707070;
+                padding: 8px 0px;
+
+                i {
+                    font-size: 20px;
+                }
+
+                &.active {
+                    color: $clr-primary;
+                }
+            }
+        }
+    }
+
+    .post-queries {
+        color: $clr-default;
+        font-weight: 500;
+
+        i {
+            font-size: 18px;
+        }
+    }
+}
+
+.chat-box {
+    margin: 25px 0px 0px 0px;
+    position: relative;
+    padding-bottom: 80px;
+
+    .msg {
+        display: flex;
+        margin-bottom: 10px;
+
+        .user {
+            .img {
+                background: red;
+                width: 50px;
+                border-radius: 50px;
+                height: 50px;
+                overflow: hidden;
+            }
+        }
+
+        .user-msg {
+            padding: 0px 5px;
+            font-size: 14px;
+
+            .name {
+                font-weight: 600;
+                font-size: 14px;
+                color: #191919;
+            }
+
+            .msg {
+                font-size: 13px;
+                color: #B4B4B4;
+            }
+        }
+
+        &.rply-msg {
+            margin-left: 50px;
+
+            .user {
+                .img {
+                    background: red;
+                    width: 25px;
+                    border-radius: 50px;
+                    height: 25px;
+                    overflow: hidden;
+                }
+            }
+
+            .user-msg {
+                padding: 0px 5px;
+                font-size: 12px;
+
+                .name {
+                    font-weight: 600;
+                    font-size: 12px;
+                    color: #191919;
+                }
+
+                .msg {
+                    font-size: 12px;
+                    color: #B4B4B4;
+                }
+            }
+        }
+    }
+
+    .msg-input {
+        // background: #A1A1A1;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+
+        .user-msg {
+            .form-inline {
+                display: flex;
+
+                .form-group {
+                    margin-bottom: 0;
+                    padding: 0px 5px;
+
+                    input {
+                        margin-bottom: 0;
+                        font-size: 16px;
+                        background: #F1F1F1;
+                        border-radius: 50px;
+                        color: #191919;
+                        padding-left: 15px;
+                        padding-right: 10px;
+                    }
+                }
+
+                button {
+                    border-radius: 50px;
+                    padding: 12px;
+
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
