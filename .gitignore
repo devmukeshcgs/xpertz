@@ -8,7 +8,7 @@ log/
 #dist/
 */node_modules/
 bower_components/
-
+yarn-error.log
 ## Files
 result.xml
 npm-debug.log
