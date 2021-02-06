@@ -1,4 +1,4 @@
-/*!Front-End - v1.0.0 -  2021-01-18 *//*!Front-End - v1.0.0 -  2021-01-18 *//*! jQuery v3.1.1 | (c) jQuery Foundation | jquery.org/license */ ! function (a, b) {
+/*!Front-End - v1.0.0 -  2021-01-28 *//*!Front-End - v1.0.0 -  2021-01-28 *//*! jQuery v3.1.1 | (c) jQuery Foundation | jquery.org/license */ ! function (a, b) {
     "use strict";
     "object" == typeof module && "object" == typeof module.exports ? module.exports = a.document ? b(a, !0) : function (a) {
         if (!a.document) throw new Error("jQuery requires a window with a document");
@@ -15456,5 +15456,32 @@ $(document).ready(function () {
     }
     home();
     search();
+
+    //$(".show-pass i").toggleClass("tn-eye tn-open-eye");
+    // <i class="tn-icon tn-open-eye"></i>
+
+    // $(".show-pass span i").on('click', '.toggle-password', function () {
+    //     $(this).toggleClass("tn-eye tn-open-eye");
+
+    //     var input = $("#pass_log_id").attr("type");
+
+    //     if (input.attr("type") === "password") {
+    //         input.attr("type", "text");
+    //     } else {
+    //         input.attr("type", "password");
+    //     }
+    // });
+
+    $("body").on('click', '.toggle-password', function () {
+        $(this).toggleClass("tn-eye tn-open-eye");
+        var input = $("#pass_log_id");
+        if (input.attr("type") === "password") {
+            input.attr("type", "text");
+        } else {
+            input.attr("type", "password");
+        }
+
+    });
+
 });
 console.log("Custome App  Loaded 03");

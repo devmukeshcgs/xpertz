@@ -56,10 +56,33 @@
             background: transparent;
             @include transition(all 0.3s ease 0.4s);
 
-            &:hover {
-                background-color: $clr-root;
+            // &:hover {
+            //     background-color: $clr-root;
+            //     color: $clr-default;
+            //     // font-weight: bold;
+            // }
+
+            &:focus {
+                background: transparent;
+                border-color: $clr-default;
                 color: $clr-default;
-                // font-weight: bold;
+            }
+
+            &:hover,
+            &.active {
+                color: $clr-root;
+                outline: none;
+                border-color: $clr-default;
+                background: transparent;
+
+                &:before {
+                    color: $clr-root;
+                    left: 2px;
+                }
+
+                &:after {
+                    right: 0;
+                }
             }
         }
 
