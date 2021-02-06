@@ -81,5 +81,32 @@ $(document).ready(function () {
     }
     home();
     search();
+
+    //$(".show-pass i").toggleClass("tn-eye tn-open-eye");
+    // <i class="tn-icon tn-open-eye"></i>
+
+    // $(".show-pass span i").on('click', '.toggle-password', function () {
+    //     $(this).toggleClass("tn-eye tn-open-eye");
+
+    //     var input = $("#pass_log_id").attr("type");
+
+    //     if (input.attr("type") === "password") {
+    //         input.attr("type", "text");
+    //     } else {
+    //         input.attr("type", "password");
+    //     }
+    // });
+
+    $("body").on('click', '.toggle-password', function () {
+        $(this).toggleClass("tn-eye tn-open-eye");
+        var input = $("#pass_log_id");
+        if (input.attr("type") === "password") {
+            input.attr("type", "text");
+        } else {
+            input.attr("type", "password");
+        }
+
+    });
+
 });
 console.log("Custome App  Loaded 03");

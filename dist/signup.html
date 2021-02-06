@@ -9,33 +9,41 @@
     <!-- <meta content="width=device-width,initial-scale=1" name="viewport"> -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="fa fa" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
-    <title>Search Results</title>
+    <title>Home</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Page CSS -->
     <link href="css/app_xpertz.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet"> <!-- <link href="everything.css" rel="stylesheet"> -->
-    <!--[if IE]><link href="css/dashboard.css" rel="stylesheet"><![endif]-->
-    <!--[if IE]><link href="stupidie.css" rel="stylesheet"><![endif]-->
-    <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
-    <script src="https://use.fontawesome.com/fc9ca5d4c9.js"></script>
-
-    <!-- <script data-main="js/app" src="js/lib/require.js"></script> -->
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
+        rel="stylesheet">
+    <link rel="stylesheet" href="./icon-font/icons.css">
 </head>
 
 <body>
-
+    <header>
+        <div class="xpertz-header typ-login hidden-xs">
+            <div id="inc-navigation">
+                <nav class="nav-wrap">
+                    <div class="container text-center">
+                        <div class="navbar-header text-center">
+                            <a class="navbar-brand hidden-xs hidden-sm" href="./index.html">
+                                <img src="images/logo.svg" alt="" srcset="">
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
                     <div class="signup-cont">
+                        <div class="text-center">
+                            <img src="images/logo.svg" alt="" srcset="">
+                        </div>
                         <h2>Sign Up</h2>
 
                         <form>
@@ -76,9 +84,18 @@
                                 </select>
                             </div>
 
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="">
+                            </div> -->
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <a class="show-pass" href="javascript:void(0)">
+                                    <span><i toggle="#password-field"
+                                            class=" toggle-password tn-icon tn-eye-open"></i></span>
+                                </a>
+
+                                <input type="password" class="form-control" id="pass_log_id" placeholder="Password">
                             </div>
                             <button type="submit" class="btn btn-default btn-block">Signup</button>
                             <p class="signup-link">

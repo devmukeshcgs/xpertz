@@ -12,9 +12,15 @@
         background: $clr-root;
         // border-bottom: 5px solid $clr-dark-orange;
         @include transition(all 0.3s ease 0.4s);
+
         // padding: 20px 0px 20px 0px;
         // margin-bottom: 5px;
-
+        &.typ-login {
+            .navbar-header {
+                float: none;
+                display: inline-block;
+            }
+        }
 
         .nav {
             >li {
@@ -95,6 +101,10 @@
                                 display: block;
                                 font-size: 12px;
                                 line-height: normal;
+                            }
+
+                            @media (max-width: 768px) {
+                                display: none;
                             }
                         }
                     }

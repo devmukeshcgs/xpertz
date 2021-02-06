@@ -41,16 +41,63 @@
 
             button {
                 width: 100%;
+                color: #555555 !important;
             }
-
         }
 
         .signup-link {
             color: $clr-default;
-            margin-top: 15px;
+            margin-top: 35px;
 
             a {
                 font-weight: $font-semi-bold;
+            }
+        }
+
+        .form-group {
+            position: relative;
+
+            .show-pass {
+                position: absolute;
+                z-index: 1;
+                right: 0px;
+                bottom: 0px;
+                padding: 9px 10px;
+                font-size: 14px;
+                line-height: 16px;
+
+                &:hover {
+                    text-decoration: none;
+                    color: #555555;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 20px 25px;
+
+        h2 {
+            font-size: 18px;
+            font-weight: $font-normal;
+            color: $clr-default;
+            margin: 10px 0px;
+        }
+
+        form {
+            .alt-login {
+                button {
+                    margin-bottom: 15px;
+                }
+            }
+
+            .signup-link {
+                color: $clr-default;
+                margin-top: 15px;
+
+                a {
+                    font-weight: $font-semi-bold;
+                }
             }
         }
     }
@@ -79,6 +126,21 @@
                 top: -6px;
                 left: 10px;
                 padding: 0px 4px;
+            }
+
+            .show-pass {
+                position: absolute;
+                z-index: 1;
+                right: 0px;
+                bottom: 0px;
+                padding: 9px 10px;
+                font-size: 14px;
+                line-height: 16px;
+
+                &:hover {
+                    text-decoration: none;
+                    color: #555555;
+                }
             }
         }
 
@@ -121,6 +183,10 @@
 
                 .form-control {}
             }
+
+            .form-control {
+                margin-bottom: 0px;
+            }
         }
 
         .or {
@@ -135,7 +201,6 @@
             button {
                 width: 100%;
             }
-
         }
 
         .signup-link {
@@ -147,5 +212,17 @@
                 font-weight: $font-semi-bold;
             }
         }
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 20px 25px;
+
+        h2 {
+            font-size: 18px;
+            font-weight: $font-normal;
+            color: $clr-default;
+            margin: 10px 0px 20px;
+        }
+
     }
 }
