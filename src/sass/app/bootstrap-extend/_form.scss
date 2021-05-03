@@ -5355,6 +5355,10 @@ table span.active {
     input {
         position: absolute;
         left: -9999px;
+
+        &:focus {
+            background: rgb(255, 255, 255);
+        }
     }
 
     label {
@@ -5870,4 +5874,23 @@ table span.active {
     margin-left: 15px;
     font-size: 12px;
     margin-top: 10px;
+}
+
+.floating {
+    color: $clr-default !important;
+    text-transform: none !important;
+    font-size: 12px !important;
+    font-style: normal !important;
+
+    &.is {
+        z-index: 50;
+        text-transform: none;
+        font-size: 12px !important;
+        color: $clr-default !important;
+        background: #ffffff !important;
+        border: 0px solid #dee2e6;
+        border-radius: 0.5rem;
+        text-transform: none !important;
+        padding: .2rem .5rem !important;
+    }
 }

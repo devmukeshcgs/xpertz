@@ -10,7 +10,7 @@
 
     form {
         .form-control {
-            padding: 9px 10px;
+            padding: 15px 10px;
             border: 1px solid $clr-default;
             font-size: 14px;
             line-height: 16px;
@@ -62,7 +62,7 @@
                 z-index: 1;
                 right: 0px;
                 bottom: 0px;
-                padding: 9px 10px;
+                padding: 15px 10px;
                 font-size: 14px;
                 line-height: 16px;
 
@@ -88,6 +88,17 @@
             .alt-login {
                 button {
                     margin-bottom: 15px;
+
+                    .btn {
+                        &.btn-default {
+                            &.typ-outline {
+                                &:hover {
+                                    background: rgba(0, 111, 188, 0.447) !important;
+                                    color: #ffffff !important;
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -119,7 +130,7 @@
             margin-bottom: 25px;
 
             label {
-                position: absolute;
+                // position: absolute;
                 color: $clr-default;
                 z-index: 2;
                 background: $clr-root;
@@ -133,7 +144,7 @@
                 z-index: 1;
                 right: 0px;
                 bottom: 0px;
-                padding: 9px 10px;
+                padding: 15px 10px;
                 font-size: 14px;
                 line-height: 16px;
 
@@ -142,10 +153,34 @@
                     color: #555555;
                 }
             }
+
+            &.timezone-l {
+                .form-control {
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                }
+
+                .floating {
+                    position: absolute;
+                    top: 0px;
+                    left: 10px;
+                    font-size: 10px;
+                    font-style: normal;
+                    text-transform: uppercase;
+                    background-color: rgba(0, 0, 0, 0);
+                    transform: translateY(-50%);
+                    margin: 0px 0px 0px -3px;
+                    padding: 1px 3px;
+                    color: rgb(0, 0, 0);
+                    line-height: 1;
+                    transition-property: all;
+                    transition-duration: 0.2s;
+                }
+            }
         }
 
         .form-control {
-            padding: 12px 10px;
+            padding: 15px 10px;
             border: 1px solid $clr-default;
             font-size: 14px;
             line-height: 16px;
@@ -165,7 +200,7 @@
                 position: relative;
 
                 label {
-                    position: absolute;
+                    // position: absolute;
                     color: $clr-default;
                     z-index: 2;
                 }
@@ -173,6 +208,28 @@
                 &.code {
                     width: 30%;
                     margin-right: 6px;
+
+                    .form-control {
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                    }
+
+                    .floating {
+                        position: absolute;
+                        top: 0px;
+                        left: 10px;
+                        font-size: 10px;
+                        font-style: normal;
+                        text-transform: uppercase;
+                        background-color: rgba(0, 0, 0, 0);
+                        transform: translateY(-50%);
+                        margin: 0px 0px 0px -3px;
+                        padding: 1px 3px;
+                        color: rgb(0, 0, 0);
+                        line-height: 1;
+                        transition-property: all;
+                        transition-duration: 0.2s;
+                    }
                 }
 
                 &.phone {
@@ -181,7 +238,7 @@
 
                 }
 
-                .form-control {}
+
             }
 
             .form-control {

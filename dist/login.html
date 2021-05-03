@@ -42,15 +42,26 @@
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
                     <div class="login-cont">
-                        <div class="text-center">
+                        <!-- <div class="text-center">
                             <img src="images/logo.svg" alt="" srcset="">
-                        </div>
+                        </div> -->
                         <h2>Login</h2>
-
+                        <!-- <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" value="admin@jqueryscript">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form> -->
                         <form>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                <input type="email" class="form-control" id="exampleInputEmail1">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
@@ -59,7 +70,7 @@
                                             class=" toggle-password tn-icon tn-eye-open"></i></span>
                                 </a>
 
-                                <input type="password" class="form-control" id="pass_log_id" placeholder="Password">
+                                <input type="password" class="form-control" id="pass_log_id">
                             </div>
                             <div class="forget-pass"><a href="">Forgot Password?</a></div>
                             <button type="submit" class="btn btn-default btn-block">Login</button>
@@ -70,11 +81,11 @@
 
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <button type="button" class="btn btn-default typ-outline ">
+                                        <button type="button" class="btn btn-default typ-outline alt-login-btn">
                                             <img src="./images/linkedin.svg" alt=""> Linkedin</button>
                                     </div>
                                     <div class="col-md-6">
-                                        <button type="button" class="btn btn-default typ-outline">
+                                        <button type="button" class="btn btn-default typ-outline alt-login-btn">
                                             <img src="./images/google.svg" alt=""> Google</button>
                                     </div>
                                 </div>
@@ -101,6 +112,16 @@
     <!-- Bootstrap.js, Jquery plugins and Custom JS code -->
     <!-- <script src="js/app.js"></script> -->
     <script src="js/app_xpertz.min.js"></script>
+    <script src="js/lib/floating-label.min.js"></script>
+    <script>
+        $(function () {
+            $("input").floatingLabel();
+
+            // $("input").floatingLabel({
+            //     placeholderColor: "#006FBC"
+            // });
+        });
+    </script>
 
 </body>
 

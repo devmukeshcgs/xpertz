@@ -1,4 +1,16 @@
 .user-profile {
+    .media {
+        margin-bottom: 25px;
+
+        .media-body {
+            h4.media-heading {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
     .user-detail-section {
         margin: 0 auto;
         max-width: 350px;
@@ -8,11 +20,6 @@
         }
 
 
-
-        .media-heading {
-            font-size: 20px !important;
-            font-weight: $font-bold;
-        }
 
         .user-details {
 

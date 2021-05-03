@@ -7,6 +7,17 @@
         padding: 15px;
         position: relative;
         background: $clr-root;
+        box-sizing: border-box;
+
+        &:hover {
+            cursor: pointer;
+            transition: box-shadow 0.3s ease-in-out;
+            // border: 1px solid #ffffff;
+            // box-sizing: border-box;
+            -moz-box-shadow: inset 0 0 0px 2px #006ebd;
+            -webkit-box-shadow: inset 0 0 0px 2px #006ebd;
+            box-shadow: inset 0 0 0px 2px #006ebd;
+        }
 
         @media(max-width:480px) {
             border: 0px solid #006FBC3C;

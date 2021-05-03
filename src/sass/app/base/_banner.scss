@@ -6,6 +6,25 @@
     background-position: center center;
     padding: 75px;
 
+    position: relative;
+
+    .container {
+        position: relative;
+        z-index: 3;
+    }
+
+    &::after {
+        content: "";
+        background: #000000;
+        opacity: 0.67;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: 2;
+    }
+
     .upcoming-evnt {
         background: $clr-root;
         border-radius: 4px;

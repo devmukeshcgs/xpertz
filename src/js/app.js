@@ -6,6 +6,8 @@ XPERTZ = (function (XPERTZ, $) {
     var $html = $('html');
     var WW = $(window).width();
     var WH = $(window).height();
+    var NAV_HEIGHT = $(".xpertz-header").height();
+    //$('main').css('min-height', screen.height - NAV_HEIGHT);
 
     XPERTZ.init = function () {};
     return XPERTZ;
@@ -32,7 +34,7 @@ $(document).ready(function () {
         console.log("onorientationchange");
     }
 
-    // $.ajax({
+    // $.ajax({  
     //     type: "GET",
     //     url: "navigation.html",
     //     data: {},

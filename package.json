@@ -22,9 +22,12 @@
     "grunt-contrib-uglify": "^5.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^3.1.0",
+    "grunt-webfont": "^1.0.1",
     "load-grunt-tasks": "^5.1.0",
     "node-sass": "^5.0.0",
-    "tinify": "^1.6.0-beta.2",
-    "grunt-webfont": "^1.0.1"
+    "tinify": "^1.6.0-beta.2"
+  },
+  "dependencies": {
+    "ion-rangeslider": "^2.3.1"
   }
 }

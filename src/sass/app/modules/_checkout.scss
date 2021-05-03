@@ -281,10 +281,9 @@
 
         .user {
             .img {
-                background: red;
-                width: 50px;
+                width: 40px;
                 border-radius: 50px;
-                height: 50px;
+                height: 40px;
                 overflow: hidden;
             }
         }
@@ -310,7 +309,6 @@
 
             .user {
                 .img {
-                    background: red;
                     width: 25px;
                     border-radius: 50px;
                     height: 25px;
@@ -353,8 +351,9 @@
 
                     input {
                         margin-bottom: 0;
-                        font-size: 16px;
-                        background: #F1F1F1;
+                        font-size: 12px;
+                        // background: #F1F1F1;
+                        background: #d0cece;
                         border-radius: 50px;
                         color: #191919;
                         padding-left: 15px;
@@ -364,7 +363,7 @@
 
                 button {
                     border-radius: 50px;
-                    padding: 12px;
+                    padding: 8px;
 
                     i {
                         font-size: 20px;

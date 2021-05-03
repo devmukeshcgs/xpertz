@@ -14,14 +14,20 @@
 
                 a {
                     display: inline-block;
-                    padding: 10px;
+                    padding: 8px 15px;
                     color: #919191;
                     background-color: #9191911D;
                     border-radius: 20px;
                     font-size: 14px;
+                    transition: background-color 0.3s ease-in-out;
+                    transition: color 0.2s ease-in-out;
 
                     &:hover {
+                        transition: background-color 0.3s ease-in-out;
+                        transition: color 0.2s ease-in-out;
+                        background-color: #b1e1ff;
                         color: $clr-default;
+                        text-decoration: none;
                     }
                 }
             }
@@ -46,4 +52,20 @@
             }
         }
     }
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
 }

@@ -56,6 +56,10 @@ $font-extra-bold:800;
     width: 4px;
     height: 4px;
     border-radius: 2px;
+
+    &:hover {
+        width: 10px;
+    }
 }
 
 /* Track */
@@ -107,3 +111,7 @@ $screen-md:768px;
 $mobile-breakpoint: 768px;
 $screen-ms:480px;
 $screen-xs:320px;
+
+main {
+    min-height: 100vh;
+}

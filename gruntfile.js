@@ -46,7 +46,8 @@ module.exports = function (grunt) {
                     // 'src/css/icheck-1.x/skins/all.css',
                     // 'src/css/bootstrap-datetimepicker/bootstrap-datetimepicker.css',
                     // 'src/css/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css',
-                    'src/css/swiper-bundle/swiper-bundle.css'
+                    'src/css/swiper-bundle/swiper-bundle.css',
+                    'src/css/ion-range-slider/ion.rangeSlider.css'
 
                 ],
                 dest: 'dist/css/app_xpertz.css'
@@ -72,7 +73,9 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: ['src/js/jquery.min.js',
-                    'src/js/bootstrap.js'
+                    'src/js/bootstrap.js',
+                    // 'src/js/jquery.validate.md.min.js',
+                    'src/js/floating-label.min.js'
                 ],
                 dest: `dist/js/bootstrap_${config.appName}.js`,
             },
@@ -80,6 +83,7 @@ module.exports = function (grunt) {
                 src: [
                     'dist/js/bootstrap_xpertz.js',
                     'src/js/plugins/swiper-bundle.js',
+                    'src/js/plugins/ion.rangeSlider.js',
                     'src/js/globle.js',
                     'src/js/home.js',
                     'src/js/search.js',

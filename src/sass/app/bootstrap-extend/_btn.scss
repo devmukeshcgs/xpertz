@@ -10,6 +10,13 @@
     overflow: hidden;
     font-weight: $font-medium;
 
+    &.btn-round {
+        padding: 6px;
+        border-radius: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     &.btn-default {
         // text-transform: uppercase;
         border-color: $clr-default;
@@ -54,7 +61,7 @@
             border: 2px solid $clr-default;
             color: $clr-default;
             background: transparent;
-            @include transition(all 0.3s ease 0.4s);
+            @include transition(all 0.3s ease 0s);
 
             // &:hover {
             //     background-color: $clr-root;
@@ -70,7 +77,7 @@
 
             &:hover,
             &.active {
-                color: $clr-root;
+                color: $clr-default;
                 outline: none;
                 border-color: $clr-default;
                 background: transparent;
@@ -83,6 +90,15 @@
                 &:after {
                     right: 0;
                 }
+            }
+
+
+        }
+
+        &.alt-login-btn {
+            &:hover {
+                background: #006FBC72;
+                color: #fff !important;
             }
         }
 

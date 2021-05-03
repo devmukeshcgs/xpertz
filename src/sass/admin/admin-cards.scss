@@ -1,0 +1,19 @@
+.admin {
+    .cards-row {
+        max-height: 325px;
+        overflow-y: scroll;
+
+        .cards {
+            // background: #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            // justify-content: space-between;
+            justify-content: space-around;
+
+            .card-item {
+                margin-bottom: 20px;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
